@@ -1,0 +1,31 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+
+opt_in_rules:
+  - explicit_init
+  - first_where
+  - redundant_self
+  - strict_fileprivate
+  - unneeded_parentheses_in_closure_argument
+  - unused_import
+  - yoda_condition
+
+analyzer_rules:
+  - unused_declaration
+  - unused_import
+
+force_cast: warning
+force_try: warning
+
+identifier_name:
+  min_length: 2
+  excluded:
+    - id
+    - vm
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 50
+    error: 60
