@@ -1,0 +1,64 @@
+# SwiftFormat Configuration for Trace
+# https://github.com/nicklockwood/SwiftFormat
+
+# -------------------------
+# File options
+# -------------------------
+--exclude Pods,build,.build,DerivedData,TraceTests,TraceUITests
+
+# -------------------------
+# Swift version + language mode (Swift 6 compiler + Swift 6 language mode)
+# SwiftFormat supports both via --swift-version and --language-mode. :contentReference[oaicite:2]{index=2}
+# -------------------------
+--swift-version 6.0
+--language-mode 6
+
+# -------------------------
+# Format options
+# -------------------------
+--indent 4
+--indentcase false
+--trimwhitespace always
+--commas inline
+--ifdef no-indent
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--wrapreturntype preserve
+--closingparen balanced
+--decimalgrouping 3,6
+--exponentcase lowercase
+--fractiongrouping disabled
+--hexgrouping 4,8
+--hexliteralcase uppercase
+--octalgrouping 4,8
+--patternlet hoist
+--stripunusedargs closure-only
+--semicolons inline
+
+# NOTE: Removed `--self init-only` because you currently disable `redundantSelf`,
+# which means SwiftFormat will *keep* explicit `self` anyway. Keeping both is confusing.
+
+# -------------------------
+# Enabled rules
+# -------------------------
+--enable isEmpty
+--enable sortedImports
+--enable duplicateImports
+--enable blankLinesBetweenScopes
+--enable redundantNilInit
+--enable redundantLet
+--enable redundantPattern
+--enable redundantGet
+--enable redundantParens
+--enable redundantReturn
+--enable redundantVoidReturnType
+--enable trailingClosures
+--enable consecutiveSpaces
+
+# -------------------------
+# Disabled rules
+# -------------------------
+--disable andOperator
+--disable redundantSelf  # Keep explicit self for clarity in some cases
+--disable wrapMultilineStatementBraces  # Can conflict with SwiftUI formatting

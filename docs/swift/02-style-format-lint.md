@@ -7,9 +7,9 @@ We follow Swift’s API design principles:
 - Avoid abbreviations unless universally understood
 - Use nouns for types, verbs for methods
 
-## Formatting (swift-format)
-- Formatting is not a debate: we format with `swift-format`.
-- The repo should contain a `.swift-format` file (see `templates/swift/.swift-format`).
+## Formatting (SwiftFormat)
+- Formatting is not a debate: we format with `SwiftFormat`.
+- The repo uses a `.swiftformat` file at the root (see `Trace/.swiftformat`).
 
 Rules of thumb:
 - Let the formatter decide whitespace/line breaks
@@ -17,7 +17,7 @@ Rules of thumb:
 
 ## Linting (SwiftLint)
 We lint with SwiftLint for consistency and to prevent common mistakes.
-- Add `.swiftlint.yml` to the repo root (see `templates/swift/.swiftlint.yml`)
+- Add `.swiftlint.yml` to the repo root (see `Trace/.swiftlint.yml`)
 - Start with warnings, tighten over time
 
 Required practices:

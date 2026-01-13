@@ -1,20 +1,23 @@
 # Swift Standards Overview (Trace)
 
 ## Scope
-These standards apply to all iOS app targets and first-party modules:
+These standards apply to all iOS app/extension targets and SwiftPM modules in Trace:
+- App targets: `Trace` (app), `TraceVPN` (packet tunnel extension), `TraceWidgetExtension` (WidgetKit + Live Activity)
 - Foundation: `TraceCore`, `TraceCompression`
 - Infrastructure: `TraceSecurity`, `TraceNetworking`
 - Feature: `TraceProxy`, `TraceFeatures`, `TraceUI`
-- App: `Trace`, `TraceVPN`, `TraceWidget`
+- Widget module: `TraceWidget` (SwiftPM target used by the extension)
+- Tests: `TraceTests`, `TraceUITests` (when writing test code)
 
 ## Default stack
-- Swift language mode: Swift 6
+- Swift language mode: Swift 6 (swift-tools-version 6.0, language mode v6)
+- Platform: iOS 26.2
 - UI: SwiftUI-first
 - Architecture: MVVM
 - Dependencies: first-party only unless explicitly approved
-- Formatting: swift-format
+- Formatting: SwiftFormat
 - Linting: SwiftLint
-- Testing: XCTest (Swift Testing allowed when we start migration)
+- Testing: XCTest
 
 ## “Must” rules (summary)
 - No force unwrap (`!`), no `try!`, no empty catches
